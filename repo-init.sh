@@ -56,7 +56,7 @@ while (($#)); do
   esac
 done
 
-echo $repo_name
+# echo $repo_name
 
 # If the repo name is omitted, display an error and the help message
 if [ ${#repo_name} -eq 0 -a $help_requested != true ]
@@ -92,16 +92,16 @@ if [ ${#types} -gt 0 ]; then
   done
 fi
 
-# git init $1
-echo "git init $1"
-cp /Users/trezendes/Projects/default.gitignore $1/.gitignore
+git init $repo_name
+# echo "git init $1"
+cp default.gitignore $repo_name/.gitignore
 # echo "cp /Users/trezendes/Projects/default.gitignore $repo_name/.gitignore"
 if [ $((copy_css)) -gt 0 ]; then
-  cp /Users/trezendes/Projects/default.css $1/default.css
+  cp default.css $repo_name/default.css
   # echo "cp /Users/trezendes/Projects/default.css $repo_name/default.css"
 fi
 if [ $((copy_robots)) -gt 0 ]; then
-  cp /Users/trezendes/Projects/robots.txt $1/robots.txt
+  cp default_robots.txt $repo_name/robots.txt
   # echo "cp /Users/trezendes/Projects/robots.txt $repo_name/robots.txt"
 fi
 
