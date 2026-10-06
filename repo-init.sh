@@ -94,15 +94,15 @@ fi
 
 # git init $1
 echo "git init $1"
-# cp /Users/trezendes/Projects/default.gitignore $1/.gitignore
-echo "cp /Users/trezendes/Projects/default.gitignore $repo_name/.gitignore"
+cp /Users/trezendes/Projects/default.gitignore $1/.gitignore
+# echo "cp /Users/trezendes/Projects/default.gitignore $repo_name/.gitignore"
 if [ $((copy_css)) -gt 0 ]; then
-  # cp /Users/trezendes/Projects/default.css $1/default.css
-  echo "cp /Users/trezendes/Projects/default.css $repo_name/default.css"
+  cp /Users/trezendes/Projects/default.css $1/default.css
+  # echo "cp /Users/trezendes/Projects/default.css $repo_name/default.css"
 fi
 if [ $((copy_robots)) -gt 0 ]; then
-  # cp /Users/trezendes/Projects/robots.txt $1/robots.txt
-  echo "cp /Users/trezendes/Projects/robots.txt $repo_name/robots.txt"
+  cp /Users/trezendes/Projects/robots.txt $1/robots.txt
+  # echo "cp /Users/trezendes/Projects/robots.txt $repo_name/robots.txt"
 fi
 
 exit $exit_code
